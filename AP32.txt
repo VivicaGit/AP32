@@ -31,7 +31,7 @@ $ grep -w -B 2 "elfo" ./anillo.txt
 $ grep -i -A 1 "compañía" ./anillo.txt
 
 10.- Líneas donde aparezca la palabra Gandalf y además también aparezca la palabra Gris.
-grep "Gandalf" anillo.txt | grep "Gris"
+$ grep "Gandalf" anillo.txt | grep "Gris"
 
 Realizad un repositorio y trabajad tal y como estamos acostumbrados a ello. Anotad los comandos en un archivo llamado AP32 el cual subiréis al repositorio en github. Comitead como mínimo una vez por cada ejercicio.
 
