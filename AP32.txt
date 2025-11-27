@@ -1,0 +1,42 @@
+Actividad AP32. Uso de grep
+
+Resolved los siguientes ejercicios con comandos de Linux. Tan solo un comando por ejercicio.Necesitaréis el archivo anillo.txt para su realización, el cual se adjunta.
+
+1.- Buscar la ocurrencia agujero en minúscula (puede ser que haya más cosas, como por ejemplo agujeros o 3agujeros...).
+$ cat ./anillo.txt | grep "agujero"
+(o también $ grep "agujero" ./anillo.txt)
+
+2.- Idem pero ignorando mayúsculas de minúsculas.
+$ grep -i "agujero" ./anillo.txt
+
+3.- La palabra "anillo" en minúscula y sin más letras (no vale ni anillos ni Anillo).
+$ grep -w "anillo" ./anillo.txt
+
+4.- Las líneas, junto con su número, en las que no aparece la secuencia anillo (ni mayúscula, ni minúscula, ni anillos, etc.).
+$ grep -n -v -i "anillo" ./anillo.txt
+
+5.- Las líneas que empiezan por Frodo.
+$ grep "^Frodo" anillo.txt
+
+6.- Las líneas que acaban por Mordor.
+$ grep "Mordor\.$" ./anillo.txt -n
+
+7.- Quiero buscar las líneas que contienen las palabras fue y que, para ello buscaré lo que contenga algo y después las letras"ue".
+$ grep -w "[fq]ue" anillo.txt -n
+
+8.- Las apariciones de la palabra elfo (solo esa palabra y en minúscula) junto con 2 líneas por encima.
+$ grep -w -B 2 "elfo" ./anillo.txt
+
+9.- Las apariciones de compañía (da igual mayúscula que minúscula) y 1 línea por debajo.
+$ grep -i -A 1 "compañía" ./anillo.txt
+
+10.- Líneas donde aparezca la palabra Gandalf y además también aparezca la palabra Gris.
+grep "Gandalf" anillo.txt | grep "Gris"
+
+Realizad un repositorio y trabajad tal y como estamos acostumbrados a ello. Anotad los comandos en un archivo llamado AP32 el cual subiréis al repositorio en github. Comitead como mínimo una vez por cada ejercicio.
+
+Entregad:
+
+-El archivo AP32
+
+-LA url del repositorio (debe de ser público) de GitHub como texto en línea.
